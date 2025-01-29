@@ -31,7 +31,6 @@ public class WebFluxConfiguration implements WebFluxConfigurer {
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
-
     @Bean
     public RouterFunction<ServerResponse> routerFunction() {
         return RouterFunctions

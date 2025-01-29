@@ -1,5 +1,8 @@
-package com.psr.spring_demo_reactive.student;
+package com.psr.spring_demo_reactive.controllers;
 
+import com.psr.spring_demo_reactive.entities.StudentEntity;
+import com.psr.spring_demo_reactive.requests.StudentRequest;
+import com.psr.spring_demo_reactive.servies.StudentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +21,7 @@ public class StudentController {
     @PostMapping
     @Operation(summary = "Create a student", description = "Stores a new student record in the database.")
     public Mono<StudentEntity> create(@RequestBody StudentRequest request) {
-        return service.create(request);
+        return service.create(request.toEntity());
     }
 
     @GetMapping
