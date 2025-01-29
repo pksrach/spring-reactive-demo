@@ -11,7 +11,10 @@ public class StudentService {
     private final StudentRepository repository;
 
     public Mono<StudentEntity> create(StudentRequest request) {
+//      or StudentEntity entity = StudentRequest.toEntity(request);
+
         return repository.save(request.toEntity());
+//      or return repository.save(entity);
     }
 
     public Flux<StudentEntity> findAll() {

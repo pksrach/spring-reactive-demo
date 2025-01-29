@@ -14,6 +14,10 @@ public class StudentRequest {
     private String lastName;
     private int age;
 
+    public static StudentEntity toEntity(StudentRequest request) {
+        return new StudentEntity(null, request.getFirstName(), request.getLastName(), request.getAge());
+    }
+
     public StudentEntity toEntity() {
         return new StudentEntity(null, firstName, lastName, age);
     }
