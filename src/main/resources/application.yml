@@ -1,0 +1,20 @@
+my-database:
+  host: localhost
+  port: 5432
+  database: spring_reactive
+  username: postgres
+  password: postgres
+  urlR2dbc: r2dbc:postgresql://${my-database.host}:${my-database.port}/${my-database.database}
+  urlJdbc: jdbc:postgresql://${my-database.host}:${my-database.port}/${my-database.database}
+
+spring:
+  application:
+    name: spring_demo_reactive
+  r2dbc:
+    url: ${my-database.urlR2dbc}
+    username: ${my-database.username}
+    password: ${my-database.password}
+  flyway:
+    url: ${my-database.urlJdbc}
+    user: ${my-database.username}
+    password: ${my-database.password}
