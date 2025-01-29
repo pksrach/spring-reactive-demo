@@ -18,3 +18,11 @@ spring:
     url: ${my-database.urlJdbc}
     user: ${my-database.username}
     password: ${my-database.password}
+
+springdoc:
+  swagger-ui:
+    enabled: true
+    path: /v3/api-docs
+  api-docs:
+    enabled: true
+    path: /v3/api-docs

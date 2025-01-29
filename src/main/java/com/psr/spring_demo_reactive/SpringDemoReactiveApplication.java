@@ -1,11 +1,7 @@
 package com.psr.spring_demo_reactive;
 
-import com.psr.spring_demo_reactive.student.Student;
-import com.psr.spring_demo_reactive.student.StudentService;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SpringDemoReactiveApplication {
