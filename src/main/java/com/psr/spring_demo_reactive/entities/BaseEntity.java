@@ -1,4 +1,4 @@
-package com.psr.spring_demo_reactive.infrastructures.entities;
+package com.psr.spring_demo_reactive.entities;
 
 import lombok.Getter;
 import lombok.Setter;

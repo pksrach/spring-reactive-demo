@@ -8,6 +8,8 @@ my-database:
   urlJdbc: jdbc:postgresql://${my-database.host}:${my-database.port}/${my-database.database}
 
 spring:
+  profiles:
+    active: ${PROFILE:dev}
   application:
     name: spring_demo_reactive
   r2dbc:

@@ -1,10 +1,9 @@
 package com.psr.spring_demo_reactive.entities;
 
-import com.psr.spring_demo_reactive.infrastructures.entities.BaseEntity;
 import lombok.*;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -16,7 +15,7 @@ public class StudentEntity extends BaseEntity {
     private String firstName;
     private String lastName;
     private int gender;
-    private Date dob;
+    private LocalDate dob;
     private String phoneNumber;
     private String card;
 }

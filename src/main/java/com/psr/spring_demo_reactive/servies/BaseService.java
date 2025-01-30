@@ -1,13 +1,13 @@
-package com.psr.spring_demo_reactive.infrastructures.service;
+package com.psr.spring_demo_reactive.servies;
 
+import com.psr.spring_demo_reactive.repositories.BaseRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RequiredArgsConstructor
 public abstract class BaseService<T, ID> implements CrudService<T, ID> {
-    private final ReactiveCrudRepository<T, ID> repository;
+    private final BaseRepository<T, ID> repository;
 
     @Override
     public Mono<T> create(T entity) {

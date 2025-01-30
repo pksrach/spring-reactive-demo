@@ -1,17 +1,19 @@
 package com.psr.spring_demo_reactive.servies;
 
 import com.psr.spring_demo_reactive.entities.StudentEntity;
-import com.psr.spring_demo_reactive.infrastructures.service.BaseService;
-import com.psr.spring_demo_reactive.requests.StudentRequest;
 import com.psr.spring_demo_reactive.repositories.StudentRepository;
+import com.psr.spring_demo_reactive.requests.StudentRequest;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
 public class StudentService extends BaseService<StudentEntity, Integer> {
 
+    private final StudentRepository repository;
+
     public StudentService(StudentRepository repository) {
         super(repository);
+        this.repository = repository;
     }
 
     public Mono<StudentEntity> create(StudentRequest request) {

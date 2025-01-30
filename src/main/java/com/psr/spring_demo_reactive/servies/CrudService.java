@@ -1,5 +1,6 @@
-package com.psr.spring_demo_reactive.infrastructures.service;
+package com.psr.spring_demo_reactive.servies;
 
+import org.springframework.data.domain.Pageable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -13,4 +14,6 @@ public interface CrudService<T, ID> {
     Mono<T> findById(ID id);
 
     Flux<T> findAll();
+
+//    Flux<T> findAll(Pageable pageable);
 }
